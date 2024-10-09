@@ -45,7 +45,7 @@ Keyboard --> Player
 Mouse --> MainMenu
 Mouse --> Player
 
-' Connections between internal components (without labels)
+' Connections between internal components
 MainMenu --> Level
 MainMenu --> Settings
 Level --> Sprites
