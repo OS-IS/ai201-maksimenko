@@ -1,0 +1,66 @@
+@startuml
+
+' Client Node
+node "Client" {
+    
+    ' Computer Application Node
+    node "Computer application" {
+        component "Main_menu" as MainMenu
+        component "Level" as Level
+        component "Sprites" as Sprites
+        component "Settings" as Settings
+        component "New Game Properties" as NewGame
+        component "Player" as Player
+    }
+
+    ' Data Management Frame
+    node "Data Management" {
+        component "PyTMX" as PyTMX
+        component "PyGame" as PyGame
+    }
+
+    ' Data Processing Frame
+    node "Data Processing" {
+        component "Pickle Serialize" as Pickle
+        component "File" as File
+    }
+
+    ' Data Storage Frame
+    node "Data Storage" {
+        component "Data" {
+            component "GraphicStorage"
+            component "SettingsStorage"
+            component "AudioStorage"
+        }
+    }
+}
+
+' Keyboard and Mouse as input devices
+entity "Клавіатура" as Keyboard
+entity "Миша" as Mouse
+
+' Connections between components and input devices
+Keyboard --> MainMenu
+Keyboard --> Player
+Mouse --> MainMenu
+Mouse --> Player
+
+' Connections between internal components
+MainMenu --> Level
+MainMenu --> Settings
+Level --> Sprites
+Level --> Player
+Level --> NewGame
+
+Level --> PyTMX
+Level --> PyGame
+PyTMX --> PyGame
+
+PyGame --> Pickle
+Pickle --> File
+File --> Data
+Data --> GraphicStorage
+Data --> SettingsStorage
+Data --> AudioStorage
+
+@enduml

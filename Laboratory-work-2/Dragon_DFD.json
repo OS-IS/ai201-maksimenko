@@ -1,0 +1,855 @@
+{
+  "version": "2.2.0",
+  "summary": {
+    "title": "Dragon_DFD",
+    "owner": "",
+    "description": "",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "Syuzhetna indi-hra na movi prohramuvannia Python",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.2.0",
+        "cells": [
+          {
+            "position": {
+              "x": 280,
+              "y": -1470
+            },
+            "size": {
+              "width": 1040,
+              "height": 600
+            },
+            "shape": "trust-boundary-box",
+            "id": "b1678e06-9a1c-4228-91fd-43d457a493e1",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": -150,
+              "y": -1270
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "User"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "9b65d558-bc54-40cf-bf88-2247b7568d96",
+            "zIndex": 1,
+            "data": {
+              "type": "tm.Actor",
+              "name": "User",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 340,
+              "y": -1240
+            },
+            "size": {
+              "width": 250,
+              "height": 140
+            },
+            "attrs": {
+              "text": {
+                "text": "Computer Application"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "0c09327d-9371-4e5d-83b7-7ddc4bd9002e",
+            "zIndex": 2,
+            "data": {
+              "type": "tm.Process",
+              "name": "Computer Application",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 640,
+              "y": -1120
+            },
+            "size": {
+              "width": 230,
+              "height": 140
+            },
+            "attrs": {
+              "text": {
+                "text": "Data Managment"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "a7b954ba-b7ad-48d0-9411-28da97e29b41",
+            "zIndex": 3,
+            "data": {
+              "type": "tm.Process",
+              "name": "Data Managment",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 952,
+              "y": -1120
+            },
+            "size": {
+              "width": 230,
+              "height": 140
+            },
+            "attrs": {
+              "text": {
+                "text": "Data Processing"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "09185494-c192-42dd-8e10-8dfd8044c664",
+            "data": {
+              "type": "tm.Process",
+              "name": "Data Processing",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            },
+            "zIndex": 4
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data entry based on options",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "59484e86-41b0-4b15-a873-bc077744e73b",
+                  "title": "Spoofing the Computer Application Process",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Computer Application may be spoofed by an attacker and this may lead to information disclosure by Human User. Consider using a standard authentication mechanism to identify the destination process.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                },
+                {
+                  "id": "59484e86-41b0-4b15-a873-bc077744e73b",
+                  "title": "Spoofing the Human User External Entity",
+                  "status": "NotApplicable",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Human User may be spoofed by an attacker and this may lead to unauthorized access to Computer Application. Consider using a standard authentication mechanism to identify the external entity.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                },
+                {
+                  "id": "cd7a0f21-6f73-4cc8-a138-4054757db932",
+                  "title": "Potential Lack of Input Validation for Computer Application",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Data flowing across Data entry based on options may be tampered with by an attacker. This may lead to a denial of service attack against Computer Application or an elevation of privilege attack against Computer Application or an information disclosure by Computer Application. Failure to verify that input is as expected is a root cause of a very large number of exploitable issues. Consider all paths and the way they handle data. Verify that all input is verified for correctness using an approved list input validation approach.",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                },
+                {
+                  "id": "d3dc0ffb-5aef-4578-9abe-88080af47fdd",
+                  "title": "Data Flow Data entry based on options Is Potentially Interrupted",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "An external agent interrupts data flowing across a trust boundary in either direction.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                },
+                {
+                  "id": "d3dc0ffb-5aef-4578-9abe-88080af47fdd",
+                  "title": "Elevation Using Impersonation",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Computer Application may be able to impersonate the context of Human User in order to gain additional privilege.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                },
+                {
+                  "id": "890d402b-e8ad-43e7-b037-a4560187aee2",
+                  "title": "Computer Application May be Subject to Elevation of Privilege Using Remote Code Execution",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Human User may be able to remotely execute code for Computer Application.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 7,
+                "informationDisclosure": 3,
+                "denialOfService": 2
+              }
+            },
+            "id": "e04f0cf9-c838-4d7a-b3b4-c23da06e0d46",
+            "source": {
+              "cell": "9b65d558-bc54-40cf-bf88-2247b7568d96"
+            },
+            "target": {
+              "cell": "0c09327d-9371-4e5d-83b7-7ddc4bd9002e"
+            },
+            "labels": [
+              "Data entry based on options"
+            ],
+            "vertices": [
+              {
+                "x": 110,
+                "y": -1380
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Displaying options",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "d3dc0ffb-5aef-4578-9abe-88080af47fdd",
+                  "title": "Authenticated Data Flow Compromised",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "An attacker can read or modify data transmitted over an authenticated dataflow.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "id": "a281e93c-cf49-4de8-b049-6995702bf4e0",
+            "source": {
+              "cell": "0c09327d-9371-4e5d-83b7-7ddc4bd9002e"
+            },
+            "target": {
+              "cell": "9b65d558-bc54-40cf-bf88-2247b7568d96"
+            },
+            "labels": [
+              "Displaying options"
+            ],
+            "vertices": [
+              {
+                "x": 50,
+                "y": -1030
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Updating data components",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "d3dc0ffb-5aef-4578-9abe-88080af47fdd",
+                  "title": "Elevation Using Impersonation",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "An attacker can read or modify data transmitted over an authenticated dataflow.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "id": "9267522d-5868-4baa-8b53-d45cc6549203",
+            "source": {
+              "cell": "0c09327d-9371-4e5d-83b7-7ddc4bd9002e"
+            },
+            "target": {
+              "cell": "a7b954ba-b7ad-48d0-9411-28da97e29b41"
+            },
+            "labels": [
+              "Updating data components"
+            ],
+            "vertices": [
+              {
+                "x": 550,
+                "y": -1010
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Downloading the original data",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "d3dc0ffb-5aef-4578-9abe-88080af47fdd",
+                  "title": "Elevation Using Impersonation",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Data Management may be able to impersonate the context of Data Processing in order to gain additional privilege.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "id": "8e434366-a10a-45cc-bbec-715a5302414b",
+            "source": {
+              "cell": "09185494-c192-42dd-8e10-8dfd8044c664"
+            },
+            "target": {
+              "cell": "a7b954ba-b7ad-48d0-9411-28da97e29b41"
+            },
+            "labels": [
+              "Downloading the original data"
+            ],
+            "vertices": [
+              {
+                "x": 900,
+                "y": -920
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Saving serialised data to local storage",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "d3dc0ffb-5aef-4578-9abe-88080af47fdd",
+                  "title": "Potential Excessive Resource Consumption for Data Processing or Data Storage",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Does Data Processing or Data Storage take explicit steps to control resource consumption? Resource consumption attacks can be hard to deal with, and there are times that it makes sense to let the OS do the job. Be careful that your resource requests don't deadlock, and that they do timeout.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "id": "bc03611b-658b-4f88-806d-23851a5cacd1",
+            "source": {
+              "cell": "09185494-c192-42dd-8e10-8dfd8044c664"
+            },
+            "target": {
+              "cell": "ff6a3ea0-956e-415d-8f3b-0b194cdf6f3b"
+            },
+            "vertices": [
+              {
+                "x": 1040,
+                "y": -1270
+              }
+            ],
+            "labels": [
+              "Saving serialised data to local storage"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data transfer for serialisation or deserialisation ",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "d3dc0ffb-5aef-4578-9abe-88080af47fdd",
+                  "title": "Elevation Using Impersonation",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Data Processing may be able to impersonate the context of Data Management in order to gain additional privilege.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "id": "9a2cef1f-eab8-40fb-8b77-4c55f9f5e4cc",
+            "source": {
+              "cell": "a7b954ba-b7ad-48d0-9411-28da97e29b41"
+            },
+            "target": {
+              "cell": "09185494-c192-42dd-8e10-8dfd8044c664"
+            },
+            "labels": [
+              "Data transfer for serialisation or deserialisation "
+            ],
+            "vertices": [
+              {
+                "x": 910,
+                "y": -1200
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Transmission of component setting data",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "d3dc0ffb-5aef-4578-9abe-88080af47fdd",
+                  "title": "Weak Access Control for a Resource",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Improper data protection of Data Storage can allow an attacker to read information not intended for disclosure. Review authorization settings.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                },
+                {
+                  "id": "d3dc0ffb-5aef-4578-9abe-88080af47fdd",
+                  "title": "Spoofing of Source Data Store Data Storage",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Data Storage may be spoofed by an attacker and this may lead to incorrect data delivered to Data Processing. Consider using a standard authentication mechanism to identify the source data store.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "id": "f1bce325-d3d6-4e0f-a625-3e5f99102f8e",
+            "source": {
+              "cell": "0c09327d-9371-4e5d-83b7-7ddc4bd9002e"
+            },
+            "target": {
+              "cell": "a7b954ba-b7ad-48d0-9411-28da97e29b41"
+            },
+            "labels": [
+              "Transmission of component setting data"
+            ],
+            "vertices": [
+              {
+                "x": 680,
+                "y": -1260
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Downloading saved data",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "d3dc0ffb-5aef-4578-9abe-88080af47fdd",
+                  "title": "Elevation Using Impersonation",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Data Management may be able to impersonate the context of Computer Application in order to gain additional privilege.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "id": "7ca6442a-8d28-4475-a319-3b5794cd0f4e",
+            "source": {
+              "cell": "ff6a3ea0-956e-415d-8f3b-0b194cdf6f3b"
+            },
+            "target": {
+              "cell": "09185494-c192-42dd-8e10-8dfd8044c664"
+            },
+            "vertices": [
+              {
+                "x": 1240,
+                "y": -1160
+              }
+            ],
+            "labels": [
+              "Downloading saved data"
+            ]
+          },
+          {
+            "position": {
+              "x": 1080,
+              "y": -1410
+            },
+            "size": {
+              "width": 180,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "Data Storage"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "id": "ff6a3ea0-956e-415d-8f3b-0b194cdf6f3b",
+            "zIndex": 11,
+            "data": {
+              "type": "tm.Store",
+              "name": "Data Storage",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": []
+            }
+          }
+        ]
+      }
+    ],
+    "diagramTop": 1,
+    "reviewer": "",
+    "threatTop": 16
+  }
+}
