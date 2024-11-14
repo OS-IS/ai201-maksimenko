@@ -50,7 +50,7 @@ openssl req -new -x509 -days 130 -nodes -text -out server.crt -keyout server.key
 ![Image 11](https://github.com/user-attachments/assets/740308e5-4ede-4265-993b-03c95aa4af33)
 
 
-![Image 12](https://github.com/user-attachments/assets/a9db6def-0008-414c-b7c5-e8856c17813f)
+![Image 12](https://github.com/user-attachments/assets/6ddf6757-4a9a-4825-8edf-84ffddecd17e)
 
 ### 11. Запустити окрему термінальну консоль та становити зв'язок із СКБД PostgreSQL, яка запущена через Docker-контейнер. Після успішного встановлення визначити версію TSLпротоколу та перелік використаних криптографічних алгоритмів
 
